@@ -68,7 +68,7 @@ class UsuarioController extends Controller
              Usuario::where('id','=',$id)->update($datosUsuario);
 
                $usuario=Usuario::findOrFail($id);
-              return view('usuario.edit', compact('usuario'));
+           return redirect('/usuario')->with('mensaje','Usuario actualizado correctamente');
 
              }
 
